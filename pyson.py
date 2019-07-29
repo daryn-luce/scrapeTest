@@ -39,7 +39,7 @@ def levelStat(level,base,per):
 #getAllChamp(data) #List all champions
 
 level = 12 #change any level
-champion = returnChamp(data, 'jinx') # change any champion name
+champion = returnChamp(data, 'singed') # change any champion name
 champStats = returnStat(champion)
 name = champ(champion,'name') # list of values below
 ad = [stat(champStats,'attackdamage'),stat(champStats,'attackdamageperlevel')] # list of values below
@@ -47,7 +47,7 @@ totalad = levelStat(level,ad[0],ad[1])
 print('-----------------------------')
 print('{} - {}'.format(name,champ(champion,'blurb')))
 print('-----------------------------')
-print('{} has {} (+{} per level) base. at level {}, {} has {}'.format(name, ad[0],ad[1],level,name,totalad))
+print('{} has {} attack damage (+{} per level) base. at level {}, {} has {}'.format(name, ad[0],ad[1],level,name,totalad))
 
 
 ### values for champ(champion, value) method
